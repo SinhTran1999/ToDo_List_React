@@ -45,7 +45,7 @@ class App extends Component{
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
-        <TodoList/>
+        <TodoList items={this.state.items}/>
         </div>
       </div>
     </div>
