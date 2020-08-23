@@ -4,11 +4,11 @@ import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import uuid from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 class App extends Component{
   state={
     items:[],
-    id:0,//id ở đây bởi vì mỗi khi chúng ta chuẩn bị tạo ra item sẽ có một số
+    id:uuidv4(),//id ở đây bởi vì mỗi khi chúng ta chuẩn bị tạo ra item sẽ có một số
     //loại id và vì vậy chúng ta sẽ sử dụng UUID và thay vào đó
     item:'',
     editItem:false
@@ -23,7 +23,15 @@ class App extends Component{
     const newItem ={
       id:this.state.id,
       item: this.state.item
-    }
+    };
+    console.log(newItem);
+    const updateItems = [...this.state.items, newItem];
+    this.setState({
+      items:updateItems,
+      item:'',
+      id:uuidv4(),
+      editItem: false
+    })
   };
   render(){
     return (
