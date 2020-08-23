@@ -22,7 +22,7 @@ class App extends Component{
     e.preventDefault();
     const newItem ={
       id:this.state.id,
-      item: this.state.item
+      title: this.state.item
     };
     console.log(newItem);
     const updateItems = [...this.state.items, newItem];
