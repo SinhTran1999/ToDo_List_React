@@ -10,7 +10,7 @@ class TodoItem extends Component {
                         <i className="fas fa-pen"></i>
                     </span>
                     <span className="mx-2 text-danger">
-                        <i className="fas fa-trash"></i>
+                        <i className="fas fa-trash "></i>
                     </span>
                 </div>
             </li>
